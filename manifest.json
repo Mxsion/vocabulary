@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "我的词汇笔记",
+    "author": "limingxuan",
+    "version": "0.01",
+    "description": "我的第一个Chrome扩展",
+    "icons": {
+        "1": "images/logo.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://www.baidu.com/"],
+            "js": ["js/cannot_touch.js"]
+        }
+    ],
+    "browser_action": {
+        "default_icon": {
+            "1": "images/logo.png"
+        },
+        "default_title": "我的词汇笔记",
+        "default_popup": "index.html"
+    },
+    "permissions": [
+        "http://ip.chinaz.com/getip.aspx"
+    ]
+}
